@@ -1,0 +1,59 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "chieftwitt/status-list",
+    "version": "1.0.0",
+    "title": "Status List",
+    "category": "widgets",
+    "icon": "list-view",
+    "description": "Display a list of status updates",
+    "keywords": ["status", "updates", "list"],
+    "supports": {
+        "align": true,
+        "html": false,
+        "typography": {
+            "fontSize": true,
+            "lineHeight": true,
+            "fontFamily": true
+        },
+        "color": {
+            "text": true,
+            "background": true,
+            "link": true
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "layout": {
+            "allowEditing": true
+        }
+    },
+    "attributes": {
+        "postsToShow": {
+            "type": "number",
+            "default": 5
+        },
+        "containerBorderWidth": {
+            "type": "string",
+            "default": "1px"
+        },
+        "containerBorderRadius": {
+            "type": "string",
+            "default": "12px"
+        },
+        "containerBorderColor": {
+            "type": "string"
+        },
+        "avatarSize": {
+            "type": "number",
+            "default": 50
+        }
+    },
+    "textdomain": "chieftwitt",
+    "editorScript": "file:./build/index.js",
+    "editorStyle": "file:./build/index.css",
+    "style": "file:./build/style-index.css",
+    "render": "file:./render.php"
+} 

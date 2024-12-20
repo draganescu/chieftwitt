@@ -1,0 +1,43 @@
+.wp-block-chieftwitt-status-list {
+    .status-list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--wp--style--block-gap, 1rem);
+    }
+
+    .chieftwitt-status {
+        background: var(--wp--preset--color--background, #fff);
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .status-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .author-info {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    .status-content {
+        margin-bottom: 1rem;
+    }
+
+    .status-link {
+        display: inline-block;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+} 
