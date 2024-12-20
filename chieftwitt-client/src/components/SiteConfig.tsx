@@ -31,7 +31,7 @@ export function SiteConfig({ onConnect, onBack, onDisconnect, isEditMode }: Site
             const password = params.get('password');
             const username = params.get('user_login');
             const url = localStorage.getItem('temp_wp_url');
-            
+
             if (url && password && username) {
                 const newSite = { 
                     url, 
@@ -62,7 +62,7 @@ export function SiteConfig({ onConnect, onBack, onDisconnect, isEditMode }: Site
             // Store the URL temporarily
             const cleanUrl = site.url.replace(/\/$/, ''); // Remove trailing slash if present
             localStorage.setItem('temp_wp_url', cleanUrl);
-            
+
             // Redirect to WordPress authorization URL
             const redirectUrl = window.location.origin + window.location.pathname;
             const authUrl = `${cleanUrl}/wp-admin/authorize-application.php?app_name=ChiefTwitt&success_url=${encodeURIComponent(redirectUrl + '#apppassword=')}`;
